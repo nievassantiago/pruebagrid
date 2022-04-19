@@ -1,0 +1,258 @@
+/*siempre resetea santy acordate*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*para el font, me costo un monton descargarlo eh, punto mas ahi*/
+@font-face {
+  font-family:Simpsonfont;
+  src: url(fuente/Simpsonfont.ttf);
+}
+
+body{
+  font-family:Simpsonfont;
+  src: url(fuente/Simpsonfont.ttf);
+  font-size: 1.2rem;
+  min-height: 100%;
+  flex-wrap: wrap;
+  
+}
+
+.grid-container >  {
+  border-radius: 4px;
+  padding: 10px;
+  
+}
+
+.cabeza {
+  grid-area: cabeza;
+ 
+}
+
+.navbar {
+  grid-area: navbar;
+  
+}
+
+.sidebar {
+  grid-area: sidebar;
+ 
+}
+
+.main {
+  grid-area: main;
+  
+}
+
+.footer {
+  grid-area: footer;
+  
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "cabeza"  100px
+    "navbar"  50px
+    "main"    auto
+    "sidebar" 50px
+    "footer"  100px;
+}
+/* media para las mobile*/
+@media (min-width: 600px) {
+  .grid-container {/* comento esto, por que
+    con el grid-template, simplidico todo
+    pero lo deho comentado, para recordar las dos maneras
+     grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas: 
+    "cabeza  cabeza"
+    "navbar  navbar"
+    "sidebar main"
+    "footer  footer"; */
+   /* de esta manera simplifico todo lo comentado de arriba, pero prefiero dejarlo*/
+    grid-template:
+      "cabeza  cabeza" 100px
+      "navbar  navbar" 50px
+      "sidebar main"   auto
+      "footer  footer" 100px /
+       200px    auto;
+  }
+}
+ /*media para el responsive*/
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "cabeza cabeza cabeza"  100px
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+ /* le metemos un poquito de flow, digo de FLEX, jeje (no sos gracioso santy)*/
+/*el header   */
+
+.cabeza{
+  display: flex;
+  background-image: url(/css/img/beasim.jpg) ; 
+  justify-content: center;
+}
+.cabeza h1{
+  height: 4.5rem;
+  font-size: auto;
+  margin: 1rem 0px 2rem 0px;
+  color:#C53CA1;
+  
+}
+/* el menu empezamos a flexiarlo tuki tuki*/
+.navbar{
+  display: flex;
+  background-image: url(/css/img/fondo.jpg);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.navbar .lista{
+  list-style: none;
+  padding: 70% ;
+  text-align: center;
+}
+ 
+.lista li{
+  height:50px;
+  text-align: center;
+  margin-top: 30%;
+
+}
+.lista li:hover{ 
+   overflow:hidden;
+   padding:20px 10px;
+}
+
+.lista li a{
+  margin: 50% 25px;
+  text-align: center;
+  color: #C53CA1;
+  padding: 1rem 25px ;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* el menu TERMINO aca*/
+
+/* VAMOS CON EL H2*/
+
+.main{
+  color:;
+
+  
+}
+.main h2{
+  margin: 12px 1rem;
+  padding-bottom:1rem;
+  background-color: #C53CA1;
+}
+/* las imagenes de el Main por here*/
+ 
+.imgsHomero{
+  display: flex;
+  justify-content:center;
+  border-radius: 1rem;
+  justify-content: space-evenly;
+  background-image: url(/css/img/fondo.jpg);
+}
+
+.imgsHomero .videoHomero{
+  margin: 1em;
+  border-radius: 1rem;
+  border: 0.2em black solid;
+  
+ 
+}
+.imgsHomero img{
+  margin: 1em;
+  border-radius: 1rem;
+  border: 0.2em black solid;
+}
+/* el footer santy */
+.footer{
+  background-image: url(/css/img/beasim3\ -\ copia.jpg);
+  display: flex;
+  justify-content: space-evenly;
+  display: flex;
+  width: 100%;
+  color: #C53CA1;
+}
+.footer p{
+  margin-top: 50px;
+}
+
+.footer h3{
+  margin-top: 50px;
+}
+/* aca termina el footer genio*/
+.hCuatro:hover{
+    transform: scale(1.1);
+    background-color: #C53CA1;
+  }
+
+.main .padreImgs{
+  display: flex;
+  flex-flow: row;
+  flex-direction:;
+  justify-content: space-evenly
+}
+.tipoHomero img:hover{
+  transform: scale(1.5);
+}
+.tipoHomero{
+  
+  margin: 10px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 25%;
+}
+.padreImgs .tipoHomero img{
+  width: 12rem;
+  height:140px;
+  margin: 25px;
+  padding: 2px;
+  border:5px black solid;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+}
+/* el aside*/
+.sidebar
+{
+  display: flex;
+}
+.sidebar img{
+  width: 100%;
+}
+/* modifico la imagen del articulo de ELLOS SON!!!! OSEA EMPIEZA ARTICLE*/
+.main{
+  background-image: url(/css/img/fondo.jpg);
+  
+}
+
+.main .img2{
+  height: 480px;
+  margin: 1em;
+  border-radius: 1rem;
+  border: 0.2em black solid;
+}
+
+.main .pArticulo{
+  color: #C53CA1;
+  padding: 1rem;
+  margin: 1rem;
+}
+.pArticulo:hover{
+  transform: scale(1.1);
+  background-color: black;
+}
