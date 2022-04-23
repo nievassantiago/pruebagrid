@@ -1,4 +1,4 @@
-/*siempre resetea santy acordate*/
+ /*siempre resetea santy acordate*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -97,7 +97,7 @@ body{
 
 .cabeza{
   display: flex;
-  background-image: url(/css/img/beasim.jpg) ; 
+  background-image: url(/img/beasim.jpg) ; 
   justify-content: center;
 }
 .cabeza h1{
@@ -110,7 +110,7 @@ body{
 /* el menu empezamos a flexiarlo tuki tuki*/
 .navbar{
   display: flex;
-  background-image: url(/css/img/fondo.jpg);
+  background-image: url(/img/fondo.jpg);
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -163,7 +163,7 @@ body{
   justify-content:center;
   border-radius: 1rem;
   justify-content: space-evenly;
-  background-image: url(/css/img/fondo.jpg);
+  background-image: url(/img/fondo.jpg);
 }
 
 .imgsHomero .videoHomero{
@@ -180,7 +180,7 @@ body{
 }
 /* el footer santy */
 .footer{
-  background-image: url(/css/img/beasim3\ -\ copia.jpg);
+  background-image: url(/img/beasim3\ -\ copia.jpg);
   display: flex;
   justify-content: space-evenly;
   display: flex;
@@ -236,7 +236,7 @@ body{
 }
 /* modifico la imagen del articulo de ELLOS SON!!!! OSEA EMPIEZA ARTICLE*/
 .main{
-  background-image: url(/css/img/fondo.jpg);
+  background-image: url(/img/fondo.jpg);
   
 }
 
@@ -255,4 +255,8 @@ body{
 .pArticulo:hover{
   transform: scale(1.1);
   background-color: black;
+}
+aside:hover{
+  transform: scale(1.5);
+
 }
